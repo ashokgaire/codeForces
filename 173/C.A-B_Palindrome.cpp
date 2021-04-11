@@ -48,7 +48,7 @@ int main()
     {
         if (arr[l] != arr[h])
         {
-            if(arr[l++] == '?')
+            if(arr[l] == '?')
             {
                 if(zero >= 0){
                     arr[l++] == '0';
