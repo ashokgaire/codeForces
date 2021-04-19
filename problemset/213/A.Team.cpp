@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    
+
 int n;
 cin >> n;
 int result = 0;
@@ -17,7 +17,5 @@ while (n--)
     result +=1;
 }
 cout << result;
-
-
     return 0;
 }
