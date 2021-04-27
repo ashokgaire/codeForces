@@ -3,7 +3,7 @@
 typedef long long int ll;
 
 #define pp pair<ll,ll>
-#define S 10010
+#define S 100100
 
 
 using namespace std;
