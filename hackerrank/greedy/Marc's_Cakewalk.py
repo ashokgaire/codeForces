@@ -19,7 +19,7 @@ def marcsCakewalk(calorie):
 
     for i in range(len(calorie)):
         result += 2**i*calorie[i]
-        print(result)
+        
     return result
 
 

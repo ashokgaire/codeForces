@@ -18,8 +18,8 @@ def gridChallenge(v):
     l = len(v[0])
     for i in range(n):
         v[i] = sorted(v[i])
-    sorted(v)
-    print(v)
+   
+
     
     for i in range(n-1):
         for j in range(l):

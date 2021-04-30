@@ -15,11 +15,26 @@ import sys
 #  2. 2D_INTEGER_ARRAY contests
 #
 
+
 def luckBalance(k, contests):
-    # Write your code here
+    n=len(contests)
+    important, optional = [], 0
+
+    for x,y in contests:
+        if y:
+            important.append(x)
+        else:
+            optional +=x
+    important.sort()
+    luck = 0
+    if(len(important) > k):
+        diff = len(important) - k
+        luck  += sum(important[diff:]) - sum(important[:diff])
+    
+    return luck + optional
+
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     first_multiple_input = input().rstrip().split()
 
@@ -33,7 +48,5 @@ if __name__ == '__main__':
         contests.append(list(map(int, input().rstrip().split())))
 
     result = luckBalance(k, contests)
+    print(result)
 
-    fptr.write(str(result) + '\n')
-
-    fptr.close()

@@ -10,7 +10,6 @@ import sys
 
 def minimumAbsoluteDifference(arr):
     arr.sort()
-    print(arr)
     mini = 10**10
 
     for i in range(len(arr)-1):
