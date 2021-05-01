@@ -17,7 +17,6 @@ import sys
 
 
 def luckBalance(k, contests):
-    n=len(contests)
     important, optional = [], 0
 
     for x,y in contests:
@@ -26,12 +25,12 @@ def luckBalance(k, contests):
         else:
             optional +=x
     important.sort()
-    luck = 0
+    
     if(len(important) > k):
         diff = len(important) - k
-        luck  += sum(important[diff:]) - sum(important[:diff])
+        return optional +  sum(important[diff:]) - sum(important[:diff])
     
-    return luck + optional
+    return sum(important) + optional
 
 
 if __name__ == '__main__':
