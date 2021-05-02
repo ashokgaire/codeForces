@@ -12,8 +12,6 @@ def getWays(n, c):
     for coin in c:
         for i in range(coin,n+1):
             numways[i] += numways[i-coin]
-
-    print(numways)
     return numways[n]
 
 if __name__ == '__main__':
