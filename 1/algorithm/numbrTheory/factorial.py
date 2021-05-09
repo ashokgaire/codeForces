@@ -6,7 +6,7 @@ import sys
 # This function finds factorial of large
 # numbers and prints them
 def factorial( n) :
-	res = [None]*500
+	res = [None]*10
 	# Initialize result
 	res[0] = 1
 	res_size = 1
@@ -59,5 +59,5 @@ def multiply(x, res,res_size) :
 	return res_size
 
 # Driver program
-factorial(100)
+factorial(5)
 
