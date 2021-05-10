@@ -1,56 +1,37 @@
-# Python program to compute
-# Totient function for
-# all numbers smaller than
-# or equal to n.
+# Python 3 program to calculate
+# Euler's Totient Function
+# using Euler's product formula
 
-# Computes and prints
-# totient of all numbers
-# smaller than or equal to n.
-def computeTotient(n):
+def phi(n) :
 
-	# Create and initialize
-	# an array to store
-	# phi or totient values
-	phi=[]
-	for i in range(n + 2):
-		phi.append(0)
-
-	for i in range(1, n+1):
-
-		phi[i] = i # indicates not evaluated yet
-					# and initializes for product
-					# formula.
-
-	# Compute other Phi values
-	for p in range(2,n+1):
+	result = n # Initialize result as n
 	
-		# If phi[p] is not computed already,
-		# then number p is prime
-		if (phi[p] == p):
+	# Consider all prime factors
+	# of n and for every prime
+	# factor p, multiply result with (1 - 1 / p)
+	p = 2
+	while p * p<= n :
+
+		# Check if p is a prime factor.
+		if n % p == 0 :
+
+			# If yes, then update n and result
+			while n % p == 0 :
+				n = n // p
+			result = result * (1.0 - (1.0 / float(p)))
+		p = p + 1
 		
-			# Phi of a prime number p is
-			# always equal to p-1.
-			phi[p] = p-1
+		
+	# If n has a prime factor
+	# greater than sqrt(n)
+	# (There can be at-most one
+	# such prime factor)
+	if n > 1 :
+		result = result * (1.0 - (1.0 / float(n)))
 
-			# Update phi values of all
-			# multiples of p
-			for i in range(2*p,n+1,p):
-			
-				# Add contribution of p to its
-				# multiple i by multiplying with
-				# (1 - 1/p)
-				phi[i] = (phi[i]//p) * (p-1)
+	return int(result)
+	
 	
 
-	# Print precomputed phi values
-	for i in range(1,n+1):
-		print("Totient of ", i ," is ",
-		phi[i])
-
-# Driver code
-
-n = 5
-computeTotient(n)
-
-# This code is contributed
-# by Anant Agarwal
+print(phi(5))
+	
