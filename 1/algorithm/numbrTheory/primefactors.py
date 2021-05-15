@@ -12,5 +12,5 @@ def primeFactor(n):
         print(n)
 
 
-n = 315
+n = 7
 primeFactor(n)
