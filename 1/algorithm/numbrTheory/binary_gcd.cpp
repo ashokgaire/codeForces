@@ -61,6 +61,6 @@ int gcd(int a, int b)
 
 int main()
 {
-    std::cout << gcd(4,8);
+    std::cout << gcd(6,6);
     return 0;
 }

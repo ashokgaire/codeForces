@@ -3,7 +3,7 @@ if m is prime we can use Fermats’s little theorem
 else use Extended Euclid Algorithm  
 
 first case:
-am-1 ≅ 1 (mod m)
+am^-1 ≅ 1 (mod m)
 
 If we multiply both sides with a^-1, we get 
 
