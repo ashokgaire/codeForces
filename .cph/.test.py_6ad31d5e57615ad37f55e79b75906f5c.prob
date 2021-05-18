@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"/home/oxy/github/cp/test.py","tests":[{"id":1621233966982,"input":"3\nababab ab\naaaaa bbb\naafafaasf aaf","output":"3\n1 3 5\nNot Found\n1\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/oxy/github/cp/test.py","group":"local","local":true}
