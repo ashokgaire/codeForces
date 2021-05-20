@@ -1,0 +1,1 @@
+{"name":"Local: sparse_table","url":"/home/oxy/github/cp/sparse_table.py","tests":[{"id":1621425530938,"input":"3\n1 4 1\n2\n1 1\n1 2","output":"4\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/oxy/github/cp/sparse_table.py","group":"local","local":true}

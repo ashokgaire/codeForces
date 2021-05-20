@@ -1,5 +1,4 @@
-
-# Class to store information of a suffix
+#Class to store information of a suffix
 class suffix:
 	
 	def __init__(self):
@@ -95,24 +94,39 @@ def buildSuffixArray(txt, n):
 	# Return the suffix array
 	return suffixArr
 
-# A utility function to print an array
-# of given size
-def printArr(arr, n):
-	
-	for i in range(n):
-		print(arr[i], end = " ")
-		
-	print()
+def searchPat(arr,txt,pat):
+    n = len(txt)
+    m = len(pat)
+
+    l = 0
+    r = n-1
+
+    while r >= l:
+        mid = l + (r - l)//2
+        query = txt[arr[mid]:arr[mid]+m]
+
+        if query == pat:
+            return "Yes"
+        elif query < pat:
+            l = mid +1
+        else:
+            r = mid -1
+    return "No"
 
 # Driver code
 if __name__ == "__main__":
+    txt = input()
+    n = len(txt)
+    suffixArr = buildSuffixArray(txt, n)
+    t = int(input())
+
+    while t> 0:
+        pat = input()
+        print(searchPat(suffixArr,txt,pat))
+        t -=1
+
+
+
+
 	
-	txt = "banana"
-	n = len(txt)
-	
-	suffixArr = buildSuffixArray(txt, n)
-	
-	print("Following is suffix array for", txt)
-	
-	printArr(suffixArr, n)
 
