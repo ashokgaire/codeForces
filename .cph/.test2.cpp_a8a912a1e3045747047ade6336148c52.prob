@@ -1,0 +1,1 @@
+{"name":"Local: test2","url":"/home/oxy/github/cp/test2.cpp","tests":[{"id":1621770882165,"input":"5\n1 4 3 2 5","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/oxy/github/cp/test2.cpp","group":"local","local":true}
