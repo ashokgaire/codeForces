@@ -1,0 +1,1 @@
+{"name":"Local: fairCompetitions","url":"/home/oxy/github/cp/1/dsu/problems/fairCompetitions.py","tests":[{"id":1622728940671,"input":"2\n3 1\n1 3\n4 2\n1 2\n3 4","output":"4\n8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/oxy/github/cp/1/dsu/problems/fairCompetitions.py","group":"local","local":true}

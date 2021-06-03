@@ -1,0 +1,1 @@
+{"name":"Local: city_flood","url":"/home/oxy/github/cp/1/dsu/problems/city_flood.py","tests":[{"id":1622731558961,"input":"4\n2\n1 2\n4 1","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/oxy/github/cp/1/dsu/problems/city_flood.py","group":"local","local":true}
