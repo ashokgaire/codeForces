@@ -1,32 +1,40 @@
-import math
+class Node:
+    def __init__(self, arg_id):
+        self._id = arg_id
 
-def findMex(c,n):
-    mex = 0
-    while mex in c:
-        mex +=1
-        
-    return mex
 
-def process(n,c,k):
-    while k > 0:
-        ma = max(c)
-        mex = findMex(c,n)
-        a = math.ceil((ma+mex)/2)
-        if mex > ma or mex == a:
-            return n+k
 
-        elif a in c:
-            break 
-        else:
-            c.add(a)
-        k -=1
-    return len(c)
+def PrimsMST(graph):
+    priority_queue = {Node(0):0}
+    added = [False]*len(graph)
+    min_cost = 0
 
-t = int(input())
+    while priority_queue:
+        node = min(priority_queue, key = priority_queue.get)
+        cost = priority_queue[node]
+        del priority_queue[node]
 
-while t > 0:
-    n,k = map(int, input().split())
-    c = set(map(int, input().split()))
+        if added[node._id] == False:
+            min_cost +=cost
+            added[node._id] = True
 
-    print(process(n,c,k))
-    t -=1
+            for item in graph[node._id]:
+                adjnode = item[0]
+                adjcost = item[1]
+                if added[adjnode] == False:
+                    priority_queue[Node(adjnode)] = adjcost
+
+    return min_cost
+
+
+if __name__ == "__main__":
+    n,m = map(int,input().split())
+    graph = [[] for _ in range(n)]
+    
+    while m > 0:
+        u,v,c = map(int, input().split())
+        graph[u-1].append((v-1,c))
+        graph[v-1].append((u-1,c))
+        m -=1
+    print(PrimsMST(graph))
+
