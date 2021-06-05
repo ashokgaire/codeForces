@@ -1,0 +1,1 @@
+{"name":"Local: printing_patterns","url":"/home/oxy/github/cp/1/graph/traversals/problems/bfs/printing_patterns.py","tests":[{"id":1622789577319,"input":"10 10 5 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/oxy/github/cp/1/graph/traversals/problems/bfs/printing_patterns.py","group":"local","local":true}

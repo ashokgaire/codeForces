@@ -1,40 +1,25 @@
-class Node:
-    def __init__(self, arg_id):
-        self._id = arg_id
-
-
-
-def PrimsMST(graph):
-    priority_queue = {Node(0):0}
-    added = [False]*len(graph)
-    min_cost = 0
-
-    while priority_queue:
-        node = min(priority_queue, key = priority_queue.get)
-        cost = priority_queue[node]
-        del priority_queue[node]
-
-        if added[node._id] == False:
-            min_cost +=cost
-            added[node._id] = True
-
-            for item in graph[node._id]:
-                adjnode = item[0]
-                adjcost = item[1]
-                if added[adjnode] == False:
-                    priority_queue[Node(adjnode)] = adjcost
-
-    return min_cost
+def gcd(a,b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a%b)
 
 
 if __name__ == "__main__":
-    n,m = map(int,input().split())
-    graph = [[] for _ in range(n)]
-    
-    while m > 0:
-        u,v,c = map(int, input().split())
-        graph[u-1].append((v-1,c))
-        graph[v-1].append((u-1,c))
-        m -=1
-    print(PrimsMST(graph))
+    t = int(input())
 
+    while t >0:
+        n = int(input())
+        a = [int(x) for x in input().split()]
+        if n > 2:
+            a[0], a[n-2] = a[n-2], a[0]
+        print(a)
+        ans = 0
+        for i in range(n):
+            for j in range(i+1,n):
+                if gcd(a[i], 2*a[j]) > 1:
+                    ans +=1
+        print(ans)
+
+
+        t -=1
