@@ -1,0 +1,1 @@
+{"name":"Local: spoj_count_components","url":"/home/oxy/github/cp/1/graph/components/spoj_count_components.py","tests":[{"id":1622881133761,"input":"5 2\n1 2\n3 4","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/oxy/github/cp/1/graph/components/spoj_count_components.py","group":"local","local":true}

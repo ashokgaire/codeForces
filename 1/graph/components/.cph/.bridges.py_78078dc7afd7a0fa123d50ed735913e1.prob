@@ -1,0 +1,1 @@
+{"name":"Local: bridges","url":"/home/oxy/github/cp/1/graph/components/bridges.py","tests":[{"id":1622882882027,"input":"1\n5 4\n1 2\n4 2\n2 3\n4 5","output":"4\n1 2\n2 3\n2 4\n4 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/oxy/github/cp/1/graph/components/bridges.py","group":"local","local":true}
