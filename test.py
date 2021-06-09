@@ -29,22 +29,23 @@ def gcd(a,b):
         return gcd(b,a%b)
     
 if __name__ == "__main__":
+    n = ini()
 
-    a = [int(x) for x in input().split()]
-    n = len(a)
-    table = {}
-
-    for i in range(n):
-        for j in range(i+1,n):
-            
-            table[a[i] + a[j]] = [a[i], a[j]]
-    ans = []
-    for i in range(n):
-        comp = 0 - a[i]
-        if comp in table:
-            d = sorted([a[i]] + table[comp])
-            if d not in ans:
-                ans.append(d)
-    print(ans)
-
+    while n > 0:
+        m = ini()
+        s = ins()
+        count = {'T':0, 'M':0}
+        for i in range(m):
+            if s[i] == 'T':
+                count['T'] +=1
+            else:
+                count['M'] +=1
+        
+        if count['T']/ count['M'] == 2.0:
+            print("YES")
+        else:
+            print("No")
+        n -=1
+        
+    
     

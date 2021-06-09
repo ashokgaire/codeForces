@@ -1,17 +1,15 @@
-
-
 def findMinLen(arr):
     return len(min(arr, key=len))
 
-
 def checkCommonPrefix(list, arr, start,end):
-
     for i in range(len(list)):
         word = list[i]
         for j in range(start, end+1):
             if word[j] != arr[j]:
                 return False
     return True
+
+
 def binarySearch(arr, n):
     prefix = ""
     r = findMinLen(arr)
