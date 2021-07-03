@@ -27,25 +27,50 @@ def gcd(a,b):
         return a
     else:
         return gcd(b,a%b)
-    
-if __name__ == "__main__":
-    n = ini()
+
+
+def summ(n):
+    res = 0
 
     while n > 0:
-        m = ini()
-        s = ins()
-        count = {'T':0, 'M':0}
-        for i in range(m):
-            if s[i] == 'T':
-                count['T'] +=1
-            else:
-                count['M'] +=1
+        res += n % 10
+        n = n//10
+    return res
+if __name__ == "__main__":
+    t = int(input())
+
+    while t:
+        n, s= inm()
+        ans = 0
+
+        if summ(n) <= s:
+            print(0)
+            t -=1
+            continue
         
-        if count['T']/ count['M'] == 2.0:
-            print("YES")
         else:
-            print("No")
-        n -=1
+            pw = 1
+
+            for i in range(1,19):
+                digit = (n//pw) % 10
+                add = pw * ((10 - digit) % 10)
+
+                n += add
+
+                ans += add
+
+                if summ(n) <= s:
+                    break
+                pw *= 10
         
-    
-    
+        print(ans)
+
+
+
+
+
+            
+
+        t -=1
+
+

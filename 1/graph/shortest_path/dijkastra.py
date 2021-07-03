@@ -1,17 +1,17 @@
 import heapq
 
 
-def dijkastra(graph,par, s,t,n):
+def dijkastra(graph,par, source,target,n):
     visited = [False]*(n+1)
     dist = [float('infinity')]*(n+1)
-    dist[s]  = 0
-    par[s] = -1
-    pq = [(0,s)]
+    dist[source]  = 0
+    par[source] = -1
+    pq = [(0,source)]
 
     while pq:
         current_distance, u = heapq.heappop(pq)
 
-        if u == t: return True
+        if u == target: return True
         visited[u] = True
 
         for v , w  in graph[u]:

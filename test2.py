@@ -1,34 +1,20 @@
-class ListNode:
-  def __init__(self,val,next=None):
-    self.next = next
-    self.val = val
+ #!/usr/bin/python3
+class A(object):
+    field = 5
+
+
+if __name__ == "__main__":
+    a1 = A()
+    a2 = A()
+    print(a1.field)
+
+    a1.field = 10
+    print(a1.field)
+
+    print(a2.field)
+
+    A.field = 7
+    print(a1.field)
+    print(a2.field) 
 
   
-
-def createNode():
-  node = ListNode(1)
-  current = node
-  for i in range(2,6):
-    current.next  = ListNode(i)
-    current = current.next
-  return node
-  
-
-
-def reveseNode(head):
-  current = head
-
-  while current.next != None:
-    temp = current.next
-    current.next = temp.next
-    current = temp
-  
-  
-
-
-
-
-head = createNode()
-reveseNode(head)
-
-
